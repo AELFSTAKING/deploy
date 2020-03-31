@@ -15,6 +15,17 @@
 |  match   |       |    |
 |  quotation   |       |  mysql  |
 
+### 硬件需求
+
+|应用|  系统  |  CPU  |  内存  |磁盘|
+|-------|-------|-------|-------|-------|
+| full-node | centos7 | 8 | 16g | 500g |
+| MySql |  | 8 | 16g | 500g |
+| Redis |  | 4 | 8g | 10g |
+| 业务模块（一台服务器可混部2个） | centos7 | 4 | 8g | 200g |
+| 中间件硬件需求请参考官方 |  |  |  | ||
+
+
 ### 中间件搭建参考
 [emqtt](https://docs.emqx.io/broker/latest/cn/getting-started/installation.html)
 
