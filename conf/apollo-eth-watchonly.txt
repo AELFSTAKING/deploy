@@ -1,0 +1,63 @@
+server.port = 8085
+cex.job.zk.serverLists = 127.0.0.1:2181
+cex.job.zk.namespace = eth-wo
+cex.job.datasource.type = com.alibaba.druid.pool.DruidDataSource
+cex.job.datasource.initialSize = 1
+cex.job.datasource.minIdle = 5
+cex.job.datasource.maxActive = 20
+cex.job.datasource.maxWait = 60000
+cex.job.datasource.testWhileIdle = true
+cex.job.datasource.timeBetweenEvictionRunsMillis = 60000
+cex.job.datasource.validationQuery = SELECT 1 FROM DUAL
+cex.job.datasource.url = jdbc:mysql://127.0.0.1:3306/job?useUnicode=true&characterEncoding=UTF-8
+cex.job.datasource.username = staking
+cex.job.datasource.password = 123456
+cex.job.datasource.driverClassName = com.mysql.jdbc.Driver
+mybatis.mapper-locations = classpath*:mybatis/*/*.xml
+mybatis.config-locations = classpath:mybatis/mybatis-config.xml
+eureka.client.service-url.defaultZone = http://127.0.0.1:8761/eureka/
+eureka.client.registry-fetch-interval-seconds = 3
+#eureka.client.serviceUrl.defaultZone = http://127.0.0.1:8761/eureka/
+#eureka.instance.instance-id = ${spring.cloud.client.ipAddress}:${spring.application.name}:${server.port}
+eureka.instance.prefer-ip-address = true
+##eureka
+#请求处理的超时时间
+ribbon.ReadTimeout = 40000
+#请求连接的超时时间
+ribbon.ConnectTimeout = 20000
+
+# 日志
+logging.config = classpath:logback.xml
+
+spring.application.name = eth-wo
+eureka.client.fetchRegistry = true
+spring.datasource.url = jdbc:mysql://127.0.0.1:3306/kofo_dev_eth-watchonly?useUnicode=true&characterEncoding=UTF-8
+spring.datasource.username = staking
+spring.datasource.password = 123456
+spring.datasource.driver-class-name = com.mysql.jdbc.Driver
+spring.datasource.type = com.alibaba.druid.pool.DruidDataSource
+spring.datasource.initialSize = 1
+spring.datasource.minIdle = 5
+spring.datasource.maxActive = 20
+spring.datasource.maxWait = 60000
+spring.datasource.timeBetweenEvictionRunsMillis = 60000
+httpclient.connectTimeout = 20000
+spring.datasource.minEvictableIdleTimeMillis = 300000
+httpclient.requestTimeout = 20000
+spring.datasource.testWhileIdle = true
+httpclient.socketTimeout = 30000
+httpclient.defaultMaxPerRoute = 100
+httpclient.maxTotalConnections = 300
+httpclient.defaultKeepAliveTimeMillis = 20000
+httpclient.closeIdleConnectionWaitTimeSecs = 30
+spring.datasource.testOnBorrow = false
+spring.datasource.testOnReturn = false
+
+watch-only.latestBlockUrl = https://api-rinkeby.etherscan.io/api?module=proxy&action=eth_blockNumber&apikey=YourApiKeyToken
+#watch-only.latestBlockUrl = https://api.etherscan.io/api?module=proxy&action=eth_blockNumber&apikey=YourApiKeyToken
+watch-only.rpcNodes = 127.0.0.1:8545
+#watch-only.rpcNodes = 127.0.0.1:8545
+watch-only.msgQueueLimit = 200
+watch-only.lagThreshold = -20
+spring.datasource.validationQuery = SELECT 1 FROM DUAL
+
