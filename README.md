@@ -51,7 +51,7 @@
 ### 数据库
 Redis和MySQL可自建或者使用云服务，~~安装过程不做介绍~~
 
-MySQL DB表初始化：
+MySQL DB表初始化(初始sql位于本仓库sql目录下)：
 ```
 for i in `ls sql`
 do
@@ -60,6 +60,9 @@ do
 	mysql -uroot  -pxxxx $db < $i
 done
 ```
+
+### 配置文件
+请将本仓库conf目录下文本文件导入Apollo，~~[apollo使用参考](https://github.com/ctripcorp/apollo/wiki/Quick-Start)~~
 
 ### 应用模块（均为Java编写）
 #### 1.构建部署
