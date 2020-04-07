@@ -1,5 +1,9 @@
 ## Deployment
 
+### ![业务架构图](images/structure.png)
+
+### ![模块部署图](images/deploy.png.png)
+
 ### 组件模块
 
 |  应用模块  |  中间件模块  |  数据库模块  |
