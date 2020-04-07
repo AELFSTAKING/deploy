@@ -1,10 +1,12 @@
 ## Deployment
 
 
-### ![业务架构图](images/structure.png)
+### 业务架构图
+![](images/structure.png)
 
 
-### ![模块部署图](images/deploy.png)
+### 模块部署图
+![](images/deploy.png)
 
 
 ### 组件模块
