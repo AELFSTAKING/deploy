@@ -14,7 +14,7 @@
 |  应用模块  |  中间件模块  |  数据库模块  |
 |  -------  |  -----  | ----  |
 |  job  |  emqtt  |    redis   |
-|  ethgateway  |   apollo   |      |
+|  ethgateway  |     |      |
 |  ethwatchonly  |   zookeeper    |    |
 |  proxy  |  eureka    |    |
 |  sequence   |   eth-fullnode    |    |
@@ -38,8 +38,6 @@
 ### 中间件搭建参考
 [emqtt](https://docs.emqx.io/broker/latest/cn/getting-started/installation.html)
 
-[apollo](https://github.com/ctripcorp/apollo/wiki/Quick-Start)
-
 [zookeeper](https://zookeeper.apache.org/doc/r3.6.0/zookeeperStarted.html)
 
 [eureka](https://github.com/Netflix/eureka/wiki/Building-Eureka-Client-and-Server)
@@ -62,7 +60,8 @@ done
 ```
 
 ### 配置文件
-请将本仓库conf目录下文本文件导入Apollo，~~[apollo使用参考](https://github.com/ctripcorp/apollo/wiki/Quick-Start)~~
+请将本仓库conf目录下文本文件和应用一一对应放到同一部署路径下，如：btc-watchonly.properties对应btc-watchonly应用
+
 
 ### 应用模块（均为Java编写）
 #### 1.构建部署
@@ -78,7 +77,7 @@ mvn -Dmaven.test.skip=true clean package
 #### 2.维护
 1.启动
 ```
-nohup java -jar -Dapollo.meta=http://xxxx:8080 -Denv=DEV -Dapollo.cluster=default xx.jar > /dev/null &
+nohup java -jar -Dspring.config.location=file:xx.properties xx.jar > /dev/null &
 ```
 2. 停止
 ```
