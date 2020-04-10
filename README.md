@@ -98,6 +98,7 @@ drwxrwxr-x 2 admin admin      4096 Mar 31 15:06 logs
 -rw-r--r-- 1 admin admin 103127669 Mar 31 15:26 staking-application.jar
 -rw-rw-r-- 1 admin admin         6 Mar 31 15:29 staking-application.pid
 -rw-rw-r-- 1 admin admin         0 Mar 31 15:30 status
+-rw-rw-r-- 1 admin admin         40 Mar 31 15:26 application.properties
 [admin@ application]$ pgrep -f staking-application.jar
 23602
 [admin@ application]$ ps -eo pid,etime,comm|grep 23602
